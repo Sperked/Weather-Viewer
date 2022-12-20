@@ -88,6 +88,7 @@ function GetWeather(city) {
             // Lat. Console Log   
             // Long. Console Log
             uvIndexCall();
+            
             GettingForecast(city)
         }
     });
