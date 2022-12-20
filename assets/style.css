@@ -1,6 +1,6 @@
 .smallCards {
     margin: 15px;
-    background-color: #4267b2;
+    background-color: #00c3ff;
     width: 190px;
     height: 240px;
 }
@@ -37,11 +37,7 @@ li:active {
     color: rgb(197, 197, 197);
 }
 
-h4 {
-    color: #0d0d0d;
-}
-
-h6 {
+h2 {
     color: #474747;
 }
 

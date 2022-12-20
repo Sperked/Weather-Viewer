@@ -1,128 +1,116 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Weather Viewer</title>
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Viewer</title>
 
-  <!-- Boostrap Css -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-  <!-- boostrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-     <!-- JQuery -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  
-  <!-- link moment.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
-  <!-- Css File -->
-  <link rel="stylesheet" href="assets/style.css" />
-  <!-- JS file -->
-  <script defer type="text/javascript" src="assets/script.js"></script>
+    <!-- Boostrap Css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- boostrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- link moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <!-- Css File -->
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- JS file -->
+    <script defer src="assets/script.js"></script>
 </head>
 
 <body>
-  <!-- Boostrap Navbar -->
-  <!-- Image and text -->
-  <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">
-      5 Day Forecast
-    </a>
-  </nav>
+    <!-- Boostrap Navbar -->
+    <!-- Image and text -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            5 Day Forecast
+        </a>
+    </nav>
 
-  <div class="col-sm-2">
-    <button id="currentBtn" type="button" class="btn btn-primary btn-sm">Use Your Current Location</button>
-  </div>
-
-  <!--  Search section -->
-  <div class="row">   
-    
-      <div class="col-sm-2">
-        <div class="card" style="width: 18rem;">
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Type city name..."  aria-label="Search" id="userInput">
-          <button class="btn btn-secondary" id="searchBtn">
-            Search
-          </button>
-        </form>
-      </div>
-      <div id="errorMessage" class="alert alert-danger" role="alert" style="display:none;"></div>
-
-      <div class="card"  style="width: 18rem;" id="listBoxParent">
-        <ul class="list-group list-group-flush" id="listBody" >
-         
-        </ul>
-      </div>
+    <div class="col-sm-2">
+        <button id="currentBtn" type="button" class="btn btn-primary btn-sm">Use Your Current Location</button>
     </div>
 
-    
+    <!--  Search section -->
+    <div class="row">
 
-    <!--  result section - right side -->
+        <div class="col-sm-2">
+            <div class="card" style="width: 18rem;">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Type city name..."
+                        aria-label="Search" id="userInput">
+                    <button class="btn btn-secondary" id="searchBtn">
+                        Search
+                    </button>
+                </form>
+            </div>
+            <div id="errorMessage" class="alert alert-danger" role="alert" style="display:none;"></div>
 
-    <div class=" container" id="result-box" >
+            <div class="card" style="width: 18rem;" id="listBoxParent">
+                <ul class="list-group list-group-flush" id="listBody">
 
-
-
-      <div class=" col-sm-10 card rounded" >
-        <h4 class=" card-title cityName">
-        </h4>
-        <p class="card-title weather"></p>
-        <p class="card-text tempature"></p>
-        <p class="card-text humidity"></p>
-        <p class="card-text wind"></p>
-        <p class="card-text ">UVIndex : <span id="UV" class="uvIndex badge badge-secondary"></span></p>
-      </div>
-      <!-- 5-day Forecast -->
-
-      <div class="col-sm-10 card rounded list-group list-group-horizontal-lg" >
-
-        <div class="col-sm-2 card-body rounded smallCards">
-          <h6 class="card-title" id="date1">Card title</h6>
-          <div class="card-title" id="iconD1"></div>
-          <p class="card-text" id="tempD1"></p>
-          <p class="card-text" id="humD1"></p>
+                </ul>
+            </div>
         </div>
-        <div class="col-sm-2 card-body rounded smallCards">
-          <h6 class="card-title" id="date2">Card title</h6>
-          <div class="card-title" id="iconD2"></div>
-          <p class="card-text" id="tempD2"></p>
-          <p class="card-text" id="humD2"></p>
+        <!--  result section - right side -->
+        <div class=" container" id="result-box">
+            <div class=" col-sm-10 card rounded">
+                <p class="card-title cityName"> </p>
+                <p class="card-title weather"></p>
+                <p class="card-text tempature"></p>
+                <p class="card-text humidity"></p>
+                <p class="card-text wind"></p>
+                <p class="card-text ">UVIndex : <span id="UV" class="uvIndex badge badge-secondary"></span></p>
+            </div>
+            <!-- 5-day Forecast -->
+            <div class="col-sm-10 card rounded list-group list-group-horizontal-lg">
+                <div class="col-sm-2 card-body rounded smallCards">
+                    <h6 class="card-title" id="date1">Card title</h6>
+                    <div class="card-title" id="iconD1"></div>
+                    <p class="card-text" id="tempD1"></p>
+                    <p class="card-text" id="humD1"></p>
+                </div>
+                <div class="col-sm-2 card-body rounded smallCards">
+                    <h6 class="card-title" id="date2">Card title</h6>
+                    <div class="card-title" id="iconD2"></div>
+                    <p class="card-text" id="tempD2"></p>
+                    <p class="card-text" id="humD2"></p>
+                </div>
+                <div class="col-sm-2 card-body rounded smallCards">
+                    <h6 class="card-title" id="date3">Card title</h6>
+                    <div class="card-title" id="iconD3"></div>
+                    <p class="card-text" id="tempD3"></p>
+                    <p class="card-text" id="humD3"></p>
+                </div>
+                <div class="col-sm-2 card-body rounded smallCards">
+                    <h6 class="card-title" id="date4">Card title</h6>
+                    <div class="card-title" id="iconD4"></div>
+                    <p class="card-text" id="tempD4"></p>
+                    <p class="card-text" id="humD4"></p>
+                </div>
+                <div class="col-sm-2 card-body rounded smallCards">
+                    <h6 class="card-title" id="date5">Card title</h6>
+                    <div class="card-title" id="iconD5"></div>
+                    <p class="card-text" id="tempD5"></p>
+                    <p class="card-text" id="humD5"></p>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-2 card-body rounded smallCards">
-          <h6 class="card-title" id="date3">Card title</h6>
-          <div class="card-title" id="iconD3"></div>
-          <p class="card-text" id="tempD3"></p>
-          <p class="card-text" id="humD3"></p>
-        </div>
-        <div class="col-sm-2 card-body rounded smallCards">
-          <h6 class="card-title" id="date4">Card title</h6>
-          <div class="card-title" id="iconD4"></div>
-          <p class="card-text" id="tempD4"></p>
-          <p class="card-text" id="humD4"></p>
-        </div>
-        <div class="col-sm-2 card-body rounded smallCards">
-          <h6 class="card-title" id="date5">Card title</h6>
-          <div class="card-title" id="iconD5"></div>
-          <p class="card-text" id="tempD5"></p>
-          <p class="card-text" id="humD5"></p>
-        </div>
-      </div>
-
-
     </div>
-  </div>
 </body>

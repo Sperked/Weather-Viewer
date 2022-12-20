@@ -80,7 +80,7 @@ function GetWeather(city) {
         success: function (weatherInfo) {
             $(".cityName").html("Location: " + weatherInfo.name + `<img src='https://openweathermap.org/img/w/${weatherInfo.weather[0].icon}.png'>` + "(" + localTime + ")");
             $(".weather").html(" Description : " + weatherInfo.weather[0].description);
-            $(".tempature").html("Tempature: " + Math.floor(weatherInfo.main.temp) + "&#8457");
+            $(".temperature").html("Temperature: " + Math.floor(weatherInfo.main.temp) + "&#8457");
             $(".humidity").html("Humidity: " + JSON.stringify(weatherInfo.main.humidity) + "%");
             $(".wind").html("Wind speed : " + JSON.stringify(weatherInfo.wind.speed) + " m/s");
             lat = weatherInfo.coord.lat;
@@ -88,7 +88,7 @@ function GetWeather(city) {
             // Lat. Console Log   
             // Long. Console Log
             uvIndexCall();
-            
+
             GettingForecast(city)
         }
     });
@@ -157,7 +157,7 @@ $("#currentBtn").on("click", function () {
         if (navigator.getLocation) {
             navigator.geolocation.getCurrentPosition(getPosition);
         } else {
-            alert("Geolocation is not supported by this browser !");
+            alert("Geolocation services not supported by this browser !");
         }
     }
     function getPosition(success) {
@@ -179,10 +179,10 @@ function CurrentWeather(lat, lon) {
             handleLocalStorage(weatherInfo.name);
             $(".cityName").html("Location: " + weatherInfo.name + `<img src='https://openweathermap.org/img/w/${weatherInfo.weather[0].icon}.png'>` + "(" + localTime + ")");
             $(".weather").html(" Description : " + weatherInfo.weather[0].description);
-            $(".tempature").html("Tempature: " + Math.floor(weatherInfo.main.temp) + "&#8457");
+            $(".temperature").html("Temperature: " + Math.floor(weatherInfo.main.temp) + "&#8457");
             $(".humidity").html("Humidity: " + JSON.stringify(weatherInfo.main.humidity) + "%");
             $(".wind").html("Wind speed : " + JSON.stringify(weatherInfo.wind.speed) + " m/s");
-            let city = wetherInfo.name
+            let city = weatherInfo.name
             // City Console Log
             uvIndexCall(lat, lon)
             GettingForecast(city)
