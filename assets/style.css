@@ -1,0 +1,51 @@
+.smallCards {
+    margin: 15px;
+    background-color: #4267b2;
+    width: 190px;
+    height: 240px;
+}
+
+#currentBtn {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: -13px;
+}
+
+.btn-outline-info {
+    width: 286px;
+    font-size: 11px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+#result-box {
+    display: none;
+    margin-top: 10px;
+}
+
+p {
+    color: #666666;
+}
+
+li:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(197, 197, 197);
+}
+
+li:active {
+    background-color: rgb(255, 255, 255);
+    color: rgb(197, 197, 197);
+}
+
+h4 {
+    color: #0d0d0d;
+}
+
+h6 {
+    color: #474747;
+}
+
+#currentWeatherBox {
+    display: none;
+    margin-top: 50px;
+}
